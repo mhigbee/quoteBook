@@ -1,0 +1,23 @@
+main {
+    margin: auto;
+    width: 70%;
+    background-color: #F1F9F9;
+}
+
+main p:first-child {
+    margin-top: 0px;
+}
+
+main p {
+    font-size: 25px;
+    padding: 15px;
+}
+
+.top-bottom-margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.author {
+    color: rgba(0, 0, 0, 0.4);
+}

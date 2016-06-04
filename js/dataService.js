@@ -13,5 +13,24 @@ angular.module('quoteBook').service('dataService', function(){
         { text: 'Life is what happens to you while you\'re busy making other plans.', author: 'John Lennon'},
         { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
     ];
-    
+    this.getData = function () {
+        return quotes;
+    };
+
+    this.addData = function(newQuote) {
+        if(newQuote.text && newQuote.author) {
+            quotes.push(newQuote);
+            return true;
+        }
+    };
+
+    this.removeData = function (quoteText) {
+        for (var i = 0; i < quotes.length; i++) {
+            if (quoteText.toLowerCase() === quotes[i].text.toLocaleLowerCase()) {
+                quotes.splice(i,1);
+            }
+        }
+    };
+
+
 });
